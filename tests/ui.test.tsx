@@ -52,7 +52,7 @@ describe('interface', () => {
     expect(within(pend).getByText(/Colmar → Strasbourg/)).toBeInTheDocument()
   })
 
-  it('financeiro começa vazio (dados privados não vêm no site)', () => {
+  it('financeiro é privado: sem login, pede para entrar', () => {
     render(
       <AuthProvider>
         <MemoryRouter>
@@ -60,6 +60,6 @@ describe('interface', () => {
         </MemoryRouter>
       </AuthProvider>,
     )
-    expect(screen.getByText(/Nenhum lançamento ainda/)).toBeInTheDocument()
+    expect(screen.getByText(/Área privada/)).toBeInTheDocument()
   })
 })
