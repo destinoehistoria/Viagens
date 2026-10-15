@@ -1,0 +1,3 @@
+# Guia pessoal de viagem: não precisa ser indexado por buscadores.
+User-agent: *
+Disallow: /

@@ -1,0 +1,7 @@
+node_modules
+dist
+*.local
+.DS_Store
+# Dados privados (financeiro, reservas): nunca publicar
+privado/*
+!privado/LEIA-ME.md
