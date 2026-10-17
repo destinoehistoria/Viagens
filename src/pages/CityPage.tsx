@@ -25,7 +25,7 @@ export function CityPage() {
   useHashScroll()
   const city = id ? cityById[id as CityId] : undefined
   const { get } = useAttractionStatus()
-  const [filter, setFilter] = useState<'todas' | AttractionStatus | 'opcionais'>('todas')
+  const [filter, setFilter] = useState<'todas' | AttractionStatus | 'opcionais' | 'gratuitos' | 'imperdíveis'>('todas')
   const [notes, setNotes] = useCityNotes(id ?? 'x')
 
   const list = useMemo(() => (city ? attractionsByCity(city.id).filter((a) => !isLogistics(a)) : []), [city])
@@ -41,6 +41,8 @@ export function CityPage() {
   const filtered = list.filter((a) => {
     if (filter === 'todas') return true
     if (filter === 'opcionais') return a.optional
+    if (filter === 'gratuitos') return a.tags?.includes('Gratuito')
+    if (filter === 'imperdíveis') return a.tags?.includes('Imperdível')
     return get(a.id) === filter
   })
   const counts = {
@@ -183,7 +185,9 @@ export function CityPage() {
             Marque cada atração como planejada, reservada, visitada ou cancelada. {counts.visitada} visitada(s), {counts.reservada} reservada(s) de {list.length}.
           </SectionTitle>
           <div className="-mx-4 mb-4 flex gap-2 overflow-x-auto px-4 pb-1" role="group" aria-label="Filtrar atrações">
-            {(['todas', 'planejada', 'reservada', 'visitada', 'cancelada', 'opcionais'] as const).map((f) => (
+            {(['todas', 'planejada', 'reservada', 'visitada', 'cancelada', 'opcionais', 'gratuitos', 'imperdíveis'] as const)
+              .filter((f) => (f === 'gratuitos' ? list.some((a) => a.tags?.includes('Gratuito')) : f === 'imperdíveis' ? list.some((a) => a.tags?.includes('Imperdível')) : true))
+              .map((f) => (
               <Pill key={f} active={filter === f} onClick={() => setFilter(f)}>
                 {f[0].toUpperCase() + f.slice(1)}
               </Pill>

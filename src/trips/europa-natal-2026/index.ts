@@ -49,6 +49,23 @@ export const trip: Trip = {
   futureIdeas,
   info: [
     {
+      title: 'Paris: museus gratuitos',
+      items: [
+        'Coleções permanentes com entrada gratuita. Exposições temporárias costumam ser pagas, e alguns museus fecham temporariamente: confira o site antes de ir.',
+        'Musée Carnavalet — a história de Paris (Marais; no roteiro de 04/12).',
+        'Petit Palais — pinturas, esculturas e a arquitetura de 1900 (no roteiro de 03/12).',
+        'Maison de Victor Hugo — o apartamento do escritor na Place des Vosges (no roteiro de 04/12).',
+        'Musée d’Art Moderne de Paris — arte moderna e contemporânea.',
+        'Musée de la Vie Romantique — o charme da Paris do século XIX.',
+        'Musée Cernuschi — coleções de arte asiática.',
+        'Musée Cognacq-Jay — arte elegante do século XVIII (Marais, ao lado do Carnavalet).',
+        'Musée Bourdelle — esculturas e o ateliê do artista.',
+        'Musée Zadkine — museu tranquilo dedicado à escultura.',
+        'Musée de la Légion d’honneur — condecorações francesas e muita história.',
+      ],
+      links: [{ label: 'Paris Musées (museus da cidade)', url: 'https://www.parismusees.paris.fr/' }],
+    },
+    {
       title: 'Fuso horário',
       items: [
         'Espanha, França, Alemanha e Luxemburgo usam o Horário da Europa Central (CET, UTC+1) em dezembro — 4 horas à frente de Fortaleza e de Brasília (UTC−3).',

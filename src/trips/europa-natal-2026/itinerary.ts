@@ -108,7 +108,7 @@ export const itinerary: TripDay[] = [
     title: 'Ópera e passagens históricas',
     items: items([
       ['Palais Garnier', { a: 'palais-garnier', r: 'pendente', n: 'Ingresso prioritário pendente.' }],
-      ['BnF — site Richelieu e Salle Ovale', { a: 'bnf-richelieu' }],
+      ['BnF — site Richelieu e Salle Ovale', { a: 'bnf-richelieu', n: 'Imperdível: ir com certeza.' }],
       ['Galerie Vivienne', { a: 'galerie-vivienne' }],
       ['Passage des Panoramas', { a: 'passage-panoramas' }],
       ['Palais-Royal', { a: 'palais-royal' }],
@@ -121,7 +121,7 @@ export const itinerary: TripDay[] = [
     timezone: CET_FR,
     title: 'Petit Palais, Grand Palais e Sena',
     items: items([
-      ['Petit Palais', { a: 'petit-palais' }],
+      ['Petit Palais', { a: 'petit-palais', n: 'Imperdível: ir com certeza. Coleção permanente gratuita.' }],
       ['Grand Palais, conforme exposição', { a: 'grand-palais', r: 'pendente', n: 'Verificar exposição em cartaz.' }],
       ['Pont Alexandre III', { a: 'pont-alexandre-iii' }],
       ['Região dos Invalides', { a: 'invalides' }],
@@ -136,7 +136,7 @@ export const itinerary: TripDay[] = [
     title: 'Paris histórica e literária',
     items: items([
       ['Musée Carnavalet', { t: '10:00', a: 'carnavalet' }],
-      ['Place des Vosges', { t: '11:45', a: 'place-des-vosges' }],
+      ['Place des Vosges', { t: '11:45', a: 'place-des-vosges', n: 'Imperdível: ir com certeza.' }],
       ['Maison de Victor Hugo', { t: '12:15', a: 'maison-victor-hugo' }],
       ['Almoço na Rue des Rosiers / Le Marais', { t: '13:00', a: 'rue-des-rosiers', k: 'refeicao' }],
       ['Musée des Archives Nationales — Hôtel de Soubise', { t: '14:45', a: 'hotel-soubise' }],
@@ -160,7 +160,10 @@ export const itinerary: TripDay[] = [
       ['ou Coulée verte René-Dumont', { a: 'coulee-verte', r: 'opcional' }],
       ['Mercado de Natal à noite (local a definir)', { k: 'livre', r: 'pendente' }],
     ]),
-    notes: ['Extras para encaixar conforme interesse: Musée de la Vie Romantique, Musée des Arts et Métiers, Collège des Bernardins.'],
+    notes: [
+      'Extras para encaixar conforme interesse: Musée de la Vie Romantique, Musée des Arts et Métiers, Collège des Bernardins.',
+      'Museus gratuitos para encaixar: veja a lista em Paris → filtro “Gratuitos” ou em Informações.',
+    ],
   },
   {
     date: '2026-12-06',
